@@ -1,0 +1,750 @@
+:root {
+   --main-color: #d6a354;
+   --second-main-color: #c12828;
+   --extandbackground-color: #ff0000;
+   --p-color: #717275;
+   --background-blue: #f0f8ff;
+
+}
+html {
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/* Start Css */
+/* Start Nav Bar */
+.landing {
+    height: 100vh;
+    width: 100%;
+}
+.navbar {
+    background-color: var(--main-color);
+    height: 100vh;
+    width: 26%;
+    padding: 111px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    z-index: 5;
+}
+@media (max-width: 992px){
+    .navbar {
+        position: fixed!important;
+        background-color: transparent;
+        padding: 0 35px;
+        top: 0;
+        width: 100%;
+        height: 18vh;
+        z-index: 5;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.navbar .collapse .navbar-nav {
+    flex-direction: column;
+    margin-top: 50px;
+}
+@media (max-width: 992px) {
+   .navbar .navbar-toggler {
+     color: white;
+     border: 1px solid  var(--main-color);
+     border-radius: 50%;
+     outline: none;
+     font-size: 35px;
+     width: 70px;
+     height: 70px;
+     background-color: var(--main-color);
+  }
+  .navbar .collapse .navbar-nav{
+    background-color: var(--main-color);
+  }
+}
+.navbar .collapse .navbar-nav a {
+    color: black;
+    transition: all 0.3s;
+    font-size: 30px;
+    font-weight: 800;
+    padding: 8px 10px;
+}
+.navbar .collapse .navbar-nav a:hover,
+.navbar .collapse .navbar-nav a.active {
+    color: white;
+}
+.landing .opining {
+    background-image: url(../img/hair-cut-barber.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: right center;
+    min-height: 100vh;
+    position: relative;
+    border-bottom: 20px solid var(--main-color);
+    overflow: hidden;
+}
+@media (max-width: 992px) {
+    .landing .opining {
+        height: calc(100vh - 100%);
+    }
+}
+.landing .opining .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+    opacity: 0.65;
+}
+.landing .opining .main-text {
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 5%;
+}
+@media (max-width: 992px) {
+    .landing .opining .main-text {
+        top: 20%;
+    }
+}
+.landing .opining .main-text h1 {
+    font-size: 95px;
+}
+.landing .opining .main-text p {
+    font-size: 25px;
+    color: black;
+    font-weight: 500;
+    margin: 25px 0 45px;
+}
+.landing .opining .main-text a {
+    font-size: 25px;
+    font-weight: bold;
+    transition: all 0.3s;
+    padding: 8px 25px;
+}
+.landing .opining .main-text a:first-of-type {
+    border: 3px solid white;
+}
+.landing .opining .main-text a:first-of-type:hover{
+    background-color: #fdbb2d;
+    border-color: #fdbb2d;
+}
+.landing .opining .main-text a:last-of-type {
+    background-color: var(--second-main-color);
+    margin-left: 30px;
+}
+@media (max-width: 992px) {
+    .landing .opining .main-text a:last-of-type {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
+.landing .opining .main-text a:last-of-type:hover {
+    background-color: #FDBB2D;
+}
+.landing .opining .side-text {
+    position: absolute;
+    z-index: 2;
+    right: -13%;
+    bottom: -13%;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    border: 10px solid var(--main-color);
+}
+@media (max-width: 992px) {
+    .landing .opining .side-text {
+        display: none;
+    }
+}
+.landing .opining .side-text .image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.landing .opining .side-text img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 10px solid var(--main-color);
+    position: absolute;
+    top: -20%;
+    left: 25%;
+}
+.landing .opining .side-text .text {
+    position: absolute;
+    width: 100%;
+    top: 27%;
+    left: 20%;
+}
+.landing .opining .side-text .text h2 {
+    max-width: 157px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 35px;
+}
+.landing .opining .side-text .text a {
+    background-color: var(--main-color);
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s;
+    padding: 8px 25px;
+    margin: 10px -10px 0;
+}
+.landing .opining .side-text .text a:hover {
+    background-color: var(--second-main-color);
+}
+/* End Nav Bar */
+/* Start About Us */
+.about-us {
+   width: 100%;
+}
+.about-us .body-text {
+    padding: 100px 50px 0;
+}
+.about-us h2 {
+    font-size: 70px;
+    letter-spacing: -4px;
+    font-weight: bold;
+}
+@media (max-width: 767px) {
+    .about-us h2 {
+        font-size: 50px;
+    }
+}
+.about-us .first-child {
+   font-size: 23px;
+   color: var(--p-color);
+   font-weight: 400;
+   border-bottom: 1px solid #dee2e6;
+}
+.about-us p>span {
+   color: var(--main-color);
+}
+.about-us h3 {
+   color: var(--second-main-color);
+   font-weight: bold;
+}
+.about-us .image {
+  width: 100%;
+}
+.about-us .image .box {
+    position: relative;
+    margin-bottom: 70px;
+    transition: all 0.3s;
+}
+.about-us .image .box::before {
+    content: "";
+    position: absolute;
+    width: 98%;
+    height: 100%;
+    background-color: var(--main-color);
+    top: 0;
+    left: 0;
+    border-radius: 25px;
+    z-index: -1;
+    transition: all 0.3s;
+}
+.about-us .image .box:hover::before {     
+    background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+    transform: scale(1.10);
+} 
+.about-us .image .box img {
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    max-height: 250px;
+    border-radius: 25px;
+    transform: rotate(8deg);
+    transition: all 0.3s;
+}
+.about-us .image .text-img {
+    position: absolute;
+    background: white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 25px;
+    padding: 10px 25px;
+    margin: 10px 20px;
+    transition: all 0.3s;
+}
+.about-us .image .box:hover img, 
+.about-us .image .box:hover .text-img {
+    transform: scale(1);
+}
+.about-us .image .text-img p {
+    font-size: 22px;
+    margin: 0;
+    color: var(--p-color);
+}
+.about-us .image .text-img ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+.about-us .image .text-img ul li {
+   background-color: var(--second-main-color);
+   width: 30px;
+   height: 30px;
+   line-height: 30px;
+   text-align: center;
+   border-radius: 50%;
+   margin-right: 10px;
+   color: white;
+}
+@media (max-width: 767px) {
+    .about-us .image .text-img ul li {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        margin-right: 5px;
+    }
+}
+/* End About Us */
+/* Start Feature */
+.feature {
+    margin-top: 10px;
+}
+.feature .body-feature{
+    background-image: url(../img/feature.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    height: 65vh;
+    z-index: 3;
+}
+.feature .body-feature .overlay {
+    z-index: 1;
+    background-color: rgba(0 0 0 /0.45);
+}
+.feature .body-feature .text {
+   z-index: 3;
+   color: white;
+}
+.feature .body-feature .text h2 {
+    font-size: 63px;
+    color: var(--second-main-color);
+    font-weight: bold;
+}
+.feature .body-feature .text p:first-of-type {
+    font-size: 26px;
+}
+.feature .body-feature .text p:last-of-type {
+    background-color: var(--main-color);
+    font-size: 18px;
+    font-weight: bold;
+}
+/* End Feature */
+/* Start Services*/
+.services {
+    margin-top: 60px;
+}
+.services h2 {
+    font-size: 46px;
+    font-weight: bold;
+    margin-bottom: 48px;
+}
+.services .box {
+    overflow: hidden;
+    border-radius: 25px;
+}
+.services .box  img {
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+.services .box:hover  img {
+    transform: scale(1.05);
+}
+.services .box .text {
+   width: 85%;
+   height: 85%;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   border: 1px solid white;
+   border-radius: 25px;
+   transition: all 0.5s;
+}
+.services .box:hover .text {
+    border: 5px solid var(--main-color);
+} 
+.services .box .text h3 {
+    font-size: 35px;
+    margin-left: 20px;
+}
+@media (max-width: 992px) {
+    .services .box .text h3 {
+        font-size: 40px;
+    }
+}
+.services .box .text span {
+    color: black;
+    font-size: 20px;
+    background-color: var(--main-color);
+    padding: 3px 15px;
+    font-weight: bold;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    margin-right: 12px;
+}
+/* End Services*/
+/* Sart Booking */
+.booking {
+    padding-top: 100px;
+}
+.booking .content {
+    background-image: url(../img/booking.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    height: 150vh;
+    z-index: 3;
+}
+@media (max-width: 992px) {
+    .booking .content {
+        height: 180vh;
+    }
+}
+.booking .booking-body {
+    background-color: white;
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    padding: 65px;
+}
+@media (max-width: 576px) {
+    .booking .booking-body {
+        padding: 35px;
+    }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+    .booking .booking-body {
+        padding: 50px;
+    }
+}
+.booking .booking-body h2 {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+.booking .booking-body p {
+    font-size: 22px;
+    color: var(--p-color);
+    line-height: 1.5;
+    margin: 10px auto;
+    letter-spacing: -1px;
+}
+.booking form input,
+.booking form select,
+.booking form textarea {
+   margin-bottom: 24px;
+   padding: 13px 0 13px 10px;
+   transition: all 0.3s;
+}
+.booking form input:hover:focus,
+.booking form select:hover:focus,
+.booking form textarea:hover:focus{
+    background-color: #f0f8ff;
+}
+.booking form  textarea.form-control {
+    width: 95%;
+    margin: 0 auto 24px;
+}
+.booking form input[type="submit"] {
+    color: white;
+    background-color: var(--second-main-color);
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s;
+}
+.booking form input[type="submit"]:hover {
+    background-color: var(--main-color);
+}
+/* End Booking */
+/* Start Prices */
+.prices {
+    padding: 100px 50px 0 70px;
+}
+@media (max-width: 767px) {
+    .prices {
+        padding: 100px 5px 0;
+    }
+}
+.prices .prices-body h2 {
+    font-size: 58px;
+    font-weight: bold;
+}
+.prices .prices-body span {
+    font-size: 20px;
+    font-weight: bold;
+}
+.prices .prices-body ul li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.prices .prices-body ul li span:first-of-type {
+    background-color: var(--p-color);
+    flex: auto;
+    height: 2px;
+    margin: auto 15px 0;
+}
+.prices .prices-body ul li span:last-of-type {
+    color: var(--main-color);
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 50px;
+} 
+@media (max-width: 992px) {
+    .prices .prices-body ul li span:last-of-type {
+        margin-right: 0;
+    }
+}
+.prices .prices-body .image {
+   background-color: var(--main-color);
+    width: calc(100% + 30px);
+    height: 85%;
+    border-radius: 20px;
+    position: relative;
+    z-index: 0;
+    transition: all 0.3s ease;
+}
+@media (max-width: 767px) {
+    .prices .prices-body .image {
+        width: 100%;
+    }
+}
+@media (max-width: 992px) {
+    .prices .prices-body .image {
+        margin-top: 60px;
+    }
+}
+.prices .prices-body .image:hover {
+    background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+    transform: scale(1.05);
+}
+.prices .prices-body .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    position: relative;
+    z-index: 3;
+    transition: all 0.3s ease;
+    transform: rotate(8deg);
+}
+/* End Prices */
+/* Start Contact */
+.contact {
+    padding: 80px 0;
+}
+.contact .say {
+    background-color: var(--background-blue);
+    padding: 70px 0;
+}
+.contact .say h2 {
+    font-size: 45px;
+    font-weight: bold;
+}
+.contact .info {
+    padding: 50px 80px;
+}
+@media (max-width: 576px) {
+    .contact .info {
+        padding: 30px 30px;
+    }
+}
+.contact .info h3 {
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+.contact .info a.phone,
+.contact .info a.email {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--main-color);
+    transition: all 0.3s;
+}
+.contact .info a:hover {
+    color: var(--second-main-color);
+}
+.contact .info ul .icon {
+    padding: 8px;
+    line-height: 35px;
+    border-radius: 50%;
+    background-color: var(--second-main-color);
+    text-align: center;
+    font-size: 18px;
+    transition: all 0.3s;
+    margin: 0 5px 0 0;
+}
+.contact .info ul .icon:hover {
+    background-color: var(--main-color);
+}
+.contact .contact-back {
+    background-color: var(--main-color);
+    width: 40%;
+    position: relative;
+    margin: 50px 0;
+    padding: 20px 40px;
+    min-height: 200px;
+    border-radius: 20px;
+}
+@media (max-width: 992px) {
+    .contact .contact-back {
+        width: 80%;
+    }
+}
+.contact .contact-us {
+    background-color: var(--second-main-color);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(8deg);
+    padding: 20px 40px;
+    height: 100%;
+    border-radius: 20px;
+}
+.contact .contact-us .shop {
+    width: 25px;
+    height: 25px;
+    background-color: var(--main-color);
+    display: block;
+    align-items: center;
+    line-height: 40px;
+    padding: 15px;
+    border-radius: 50%;
+    transform: rotate(-8deg);
+}
+.contact .contact-us .open {
+    transform: rotate(-8deg);
+    font-size: 22px;
+}
+.contact .contact-us span {
+    transform: rotate(-8deg);
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+/* End Contact */
+/* Start Map */
+.map img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.map p {
+    position: absolute;
+    left: 13%;
+    top: 5%;
+    background-color: white;
+}
+@media (max-width: 1115px) {
+    .map p {
+        left: 7%;
+    }
+}
+.map p a {
+    color: #8e54fb;
+    font-size: 15px;
+    padding: 3px 5px;
+    transition: all 0.3s;
+}
+.map p:hover a {
+   color: pink;
+}
+.map .icons {
+    position: absolute;
+    bottom: 5%;
+    right: 13%;
+    background-color: white;
+    width: 45px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+@media (max-width: 1115px) {
+    .map .icons {
+        right: 7%;
+    }
+}
+.map .color {
+    font-size: 22px;
+    color: var(--p-color);
+}
+.map span {
+    background-color: rgb(230, 230, 230);
+    width: 80%;
+    height: 2px;
+    position: relative;
+    margin: 0 5px;
+}
+/* End Map */
+/* Start Footer */
+.footer {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+}
+.footer::after {
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 10px;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+}
+@media (max-width: 992px) {
+    .footer::after {
+        width: 100%;
+    }
+}
+.footer h4 {
+    color: var(--second-main-color);
+    font-weight: bold;
+}
+.footer .coloring {
+   color: var(--p-color);
+   font-size: 20px;
+   font-weight: 600;
+   max-width: 220px;
+}
+.footer .copyright {
+    max-width: 100%;
+    color: var(--p-color);
+    font-weight: 500;
+}
+.footer .copyright a {
+    color: var(--main-color);
+    transition: all 0.3s;
+}
+.footer .copyright a:hover {
+    color: var(--second-main-color);
+}
+/* End Footer */
